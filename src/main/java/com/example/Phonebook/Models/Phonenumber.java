@@ -1,8 +1,6 @@
-package Models;
+package com.example.Phonebook.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,10 +10,8 @@ import lombok.Setter;
 @Entity
 public class Phonenumber {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
-    @OneToMany
-    private Phonenumber phonenumber;
     private String code;
     private String Number;
 
